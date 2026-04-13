@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b0a5a5740ee4907bf0c53879b9c95b6, type: 3}
+  m_Name: "SoBrasMuscl\xE9Droit"
+  m_EditorClassIdentifier: Assembly-CSharp::SoMember
+  _prfMember: {fileID: 4502073060604152653, guid: 9d759ba8e832901408682d69807bd1ee, type: 3}
+  type: 1
+  _name: "Bras Droit Muscl\xE9"
+  _description: "Un bras droit de quelqu'un de bodybuild\xE9. Il frappe apr\xE8s
+    un d\xE9lais assez conc\xE9quant."
+  _sprite: {fileID: 7505177223446202820, guid: f4b68a6beeb90e5478c1347495efcd64, type: 3}
