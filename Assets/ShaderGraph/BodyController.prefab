@@ -162,9 +162,9 @@ MonoBehaviour:
     - {fileID: 8300000, guid: 02f7c2c5ebd5a204a861c74e85ad8dff, type: 3}
     - {fileID: 8300000, guid: eac68cf0ca8080c4598684c1e84a2105, type: 3}
     Volume: 0.75
-    UsRandomPitch: 0
-    MinPitch: 0.9
-    MaxPitch: 1.1
+    UsRandomPitch: 1
+    MinPitch: 0.8
+    MaxPitch: 1.2
 --- !u!50 &2618924168571508147
 Rigidbody2D:
   serializedVersion: 5

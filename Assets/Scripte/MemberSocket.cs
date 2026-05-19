@@ -33,11 +33,24 @@ public class MemberSocket : MonoBehaviour {
     
     public void Start()
     {
-        _crouchAction =InputSystem.actions.FindAction("Crouch");
-        _crouchAction.started+= CrouchActionOnstarted;
+        StaticEvents.OnConfiguring+= StaticEventsOnOnConfiguring;
+        //_crouchAction =InputSystem.actions.FindAction("Crouch");
+        //_crouchAction.started+= CrouchActionOnstarted;
         if(_uiSocketMember != null)_uiSocketMember.OnMemberRotChange+= UiSocketMemberOnOnMemberRotChange;
         if (transform.childCount>0&&transform.GetChild(0).GetComponent<IMember>() != null) {
             OnMemberAutoAdd?.Invoke(this, transform.GetChild(0).GetComponent<IMember>());
+        }
+    }
+
+    private void StaticEventsOnOnConfiguring(object sender, bool e) {
+        if (_uiSocketMember == null|| _currentMember==null|| MemberType!= IMember.Membertype.Arm) return;
+        if (e) {
+            _uiSocketMember.gameObject.SetActive(true);
+            _uiOpen = true;
+        }
+        else {
+            _uiSocketMember.gameObject.SetActive(false);
+            _uiOpen = false;
         }
     }
 

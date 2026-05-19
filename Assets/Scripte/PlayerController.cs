@@ -35,12 +35,14 @@ public class PlayerController : MonoBehaviour, Idamagable
     private InputAction _moveAction;
     private InputAction _attackAction;
     private InputAction _jump;
+    private InputAction _crouchAction;
     
     Vector2 _moveDirection;
     private float _yVelocity;
     private bool _isJumping;
     private bool _isGrounded;
     private int _memberCount = 0;
+    private bool _isConfigurating;
 
     private void Awake() {
         foreach (var soket in _legSockets) soket.OnMemberAutoAdd+= SocketAutoAddMenber;
@@ -55,8 +57,15 @@ public class PlayerController : MonoBehaviour, Idamagable
         _attackAction.performed += AttackActionOnperformed;
         _jump = InputSystem.actions.FindAction("Jump");
         _jump.started += JumpOnstarted;
+        _crouchAction =InputSystem.actions.FindAction("Crouch");
+        _crouchAction.started+= StartCustom;
         
         StaticEvents.OnNewMemberSelected+= StaticEventsOnOnNewMemberSelected;
+    }
+
+    private void StartCustom(InputAction.CallbackContext obj ) {
+        _isConfigurating = !_isConfigurating;
+        StaticEvents.configuring(_isConfigurating);
     }
 
     private void OnDestroy()
@@ -119,7 +128,7 @@ public class PlayerController : MonoBehaviour, Idamagable
     }
 
     private void ManageMouvement() {
-        
+        if(_isConfigurating)return;
         _rb.AddForce(transform.right* (_moveDirection.x* _moveSpeed * Time.deltaTime));
         if (Mathf.Abs(_rb.linearVelocityX) > _maxVelocity) {
             _rb.linearVelocityX =Mathf.Clamp(_rb.linearVelocityX,-_maxVelocity, _maxVelocity);

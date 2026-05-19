@@ -9,6 +9,7 @@ public static class StaticEvents
     public static event EventHandler<SoMember> OnNewMemberSelected;
     public static event EventHandler OnGameOver;
     public static event EventHandler OnWin;
+    public static event EventHandler<bool> OnConfiguring;
     
     public static void NewMemberSelected(SoMember m) {
         OnNewMemberSelected?.Invoke(null, m);
@@ -26,6 +27,7 @@ public static class StaticEvents
     public static void Win() {
         OnWin?.Invoke(null, null);
     }
+    public static void configuring(bool value)=> OnConfiguring?.Invoke(null, value);
 
     
 }
