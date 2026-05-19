@@ -40822,6 +40822,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 58707918110507363, guid: 52b72d192c31f6e459c683bc0173be1b, type: 3}
+      propertyPath: m_UiScaleMode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 58707918110507363, guid: 52b72d192c31f6e459c683bc0173be1b, type: 3}
+      propertyPath: m_MatchWidthOrHeight
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 58707918110507363, guid: 52b72d192c31f6e459c683bc0173be1b, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 800
+      objectReference: {fileID: 0}
     - target: {fileID: 273634058511025059, guid: 52b72d192c31f6e459c683bc0173be1b, type: 3}
       propertyPath: _aeOpenPanel.AudioClips.Array.size
       value: 1
@@ -40835,6 +40847,10 @@ PrefabInstance:
       value: Canvas
       objectReference: {fileID: 0}
     - target: {fileID: 346769730687050028, guid: 52b72d192c31f6e459c683bc0173be1b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1555638749906561171, guid: 52b72d192c31f6e459c683bc0173be1b, type: 3}
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
