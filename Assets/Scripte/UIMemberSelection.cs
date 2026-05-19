@@ -1,6 +1,8 @@
 using System;
 using TMPro;
 using UnityEngine;
+using UnityEngine.Localization.Settings;
+using UnityEngine.Localization.Tables;
 using UnityEngine.UI;
 
 public class UIMemberSelection : MonoBehaviour {
@@ -16,9 +18,9 @@ public class UIMemberSelection : MonoBehaviour {
     public void SetUpSOMember(SoMember soMember) {
         _soMember = soMember;
         _imgDisplay.sprite = _soMember._sprite;
-        _txtTitle.text = _soMember._name;
-        _txtType.text = _soMember.type.ToString();
-        _txtDescription.text =  _soMember._description;
+        _txtTitle.text = _soMember._LocalizerdName.GetLocalizedString();
+        _txtType.text = _soMember._LocalizerdType.GetLocalizedString();
+        _txtDescription.text =  _soMember._LocalizerdDescription.GetLocalizedString();
     }
 
     private void Start() {

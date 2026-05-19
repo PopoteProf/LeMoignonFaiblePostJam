@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using UnityEngine.Localization.Settings;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -12,6 +13,8 @@ public class UIMainMenu : MonoBehaviour
     [SerializeField] private Button _bpCredit;
     [SerializeField] private Button _bpQuit;
     [SerializeField] private Button _bpCreditRetour;
+    [SerializeField] private Button _bplanguage1;
+    [SerializeField] private Button _bplanguage2;
     [SerializeField] private Transform _panelCredit;
     
     [Header("FeedBack")]
@@ -29,6 +32,8 @@ public class UIMainMenu : MonoBehaviour
         _bpCredit.onClick.AddListener(UIButtonCredit);
         _bpQuit.onClick.AddListener(UIButtonQuit);
         _bpCreditRetour.onClick.AddListener(UIButtonCreditRetour);
+        _bplanguage1.onClick.AddListener(ChangeLanguage);
+        _bplanguage2.onClick.AddListener(ChangeLanguage);
     }
     
 
@@ -66,5 +71,14 @@ public class UIMainMenu : MonoBehaviour
         _panelMainButton.gameObject.SetActive(true);
         _panelCredit.gameObject.SetActive(false);
         AudioBus.OnPlayAudioElementSFX(_aePanelOpen);
+    }
+
+    private void ChangeLanguage()
+    {
+        int id= 0;
+        if (LocalizationSettings.SelectedLocale == LocalizationSettings.AvailableLocales.Locales[0]) {
+            id =1;
+        }
+        LocalizationSettings.SelectedLocale = LocalizationSettings.AvailableLocales.Locales[id];
     }
 }

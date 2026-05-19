@@ -1,0 +1,81 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e9620f8c34305754d8cc9a7e49e852d9, type: 3}
+  m_Name: InWorldText_en
+  m_EditorClassIdentifier: Unity.Localization::UnityEngine.Localization.Tables.StringTable
+  m_LocaleId:
+    m_Code: en
+  m_SharedData: {fileID: 11400000, guid: 13c29e64911411042b3821f6dfdf6a31, type: 2}
+  m_Metadata:
+    m_Items: []
+  m_TableData:
+  - m_Id: 19908501504
+    m_Localized: Move around with A and D
+    m_Metadata:
+      m_Items: []
+  - m_Id: 350432239616
+    m_Localized: "Space \nto jumping"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 600760885248
+    m_Localized: "Some depths are too \nunfathomable for you..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 809486229504
+    m_Localized: You are fragile.
+    m_Metadata:
+      m_Items: []
+  - m_Id: 990084571136
+    m_Localized: "A pile of meat, you could\r\nrecover some ... \npieces"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1228362981376
+    m_Localized: 'Change your body with
+
+      the C key'
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1382117777408
+    m_Localized: "The sphincters can \nblock the passage"
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1555770351616
+    m_Localized: Follow the nerve...
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1771282079744
+    m_Localized: Destroy the organ
+    m_Metadata:
+      m_Items: []
+  - m_Id: 1903054528512
+    m_Localized: With the left click
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2051633553408
+    m_Localized: "He could hurt you... \ntear off your limbs..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2303249850368
+    m_Localized: "You're starting to \ntake shape."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2505042010112
+    m_Localized: "Perhaps you will live \na little longer..."
+    m_Metadata:
+      m_Items: []
+  - m_Id: 2628350353408
+    m_Localized: My thing
+    m_Metadata:
+      m_Items: []
+  references:
+    version: 2
+    RefIds: []
